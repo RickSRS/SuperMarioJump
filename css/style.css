@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/*Reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+}
+
+/*Informações na tela*/
+.timeStart{
+    position: absolute;
+    font-size: 50px;
+    margin-top: 100px;
+    margin-left: 265px;
+}
+
+.gameOver{
+    position: absolute;
+    font-size: 35px;
+    margin-top: 120px;
+    margin-left: 110px;
+}
+
+.gameover-container{
+    margin-left: 240px;
+    width: 530px;
+    height: 300px;
+    background: radial-gradient(#363636, #000);
+    position: absolute;
+    top: 120px;
+    opacity: 0;
+    transition: opacity 5s ease;
+}
+
+.fade-gameover{
+    opacity: 1;
+}
+
+.pressStart{
+    position: absolute;
+    font-size: 20px;
+    margin-top: 120px;
+    margin-left: 140px;
+    animation: start-animation 500ms infinite ease-out;
+}
+
+@keyframes start-animation{
+    0%{
+        color: rgb(29, 29, 29);
+    }
+    10%{
+        color: rgb(36, 36, 36);
+    }
+    20%{
+        color: rgb(59, 58, 58);
+    }
+    30%{
+        color: rgb(122, 122, 122);
+    }
+    40%{
+        color: rgb(196, 193, 193);
+    }
+    50%{
+        color: rgb(255, 255, 255);
+    }
+    60%{
+        color: rgb(196, 193, 193);
+    }
+    70%{
+        color: rgb(122, 122, 122);
+    }
+    80%{
+        color: rgb(59, 58, 58);
+    }
+    90%{
+        color: rgb(24, 23, 23);
+    }
+}
+
+.info-dev{
+    position: absolute;
+    font-size: 15px;
+    margin: 5px 0 0 15px;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Configuração Switch*/
+.game-switch{
+    top: -50px;
+    position: absolute;
+}
+
+/*Configuração tela*/
+.game-board{
+    margin-left: 240px;
+    width: 530px;
+    height: 260px;
+    top: 120px;
+    position: relative;
+    overflow: hidden; /*faz com que tudo que sair do quadro (div) saia da tela*/
+    background: linear-gradient(#81CEEB, #E0F6FF);
+} 
+
+.game-info{
+    background: rgb(34, 136, 184);
+    margin: 0 auto;
+    position: relative;
+    height: 30px;
+}
+
+/*Configuração do mario*/
+.mario{
+    width: 45px;
+    position: absolute;
+    margin-left: 90px;
+    bottom: 0px;
+}
+
+.jump{
+    animation: jump 500ms ease-out;
+}
+
+@keyframes jump {
+    0%{
+        bottom: 0;
+    }  
+    40%{
+        bottom: 180px;
+    }
+    50%{
+        bottom: 180px;
+    }
+    60%{
+        bottom: 175px;
+    }
+    70%{
+        bottom: 150px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+
+/*Configuração do pipe*/
+.pipe{
+    right: -80px;
+    position: absolute;
+    bottom: -25px;
+    width: 70px;
+}
+
+.pipe-animation{
+    animation: pipe-animation 1.2s infinite linear;
+}
+
+@keyframes pipe-animation {
+    /*faz com que começa na posição 0 e termine no ate 100*/
+    from{
+        right: -80px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+/*Configuração do fantasma*/
+.boo{
+    right: -60px;
+    position: absolute;
+    bottom: 100px;
+    width: 47px;
+}
+
+.boo-animation{
+    animation: pipe-animation 1s infinite linear;
+}
+
+@keyframes boo-animation {
+    /*faz com que começa na posição 0 e termine no ate 100*/
+    from{
+        right: -60px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+/*Configuração da nuvem*/
+.clouds1{
+    right: -350px;
+    width: 350px;
+    position: absolute;
+}
+
+.clouds2{
+    right: -350px;
+    width: 220px;
+    margin-top: 75px;
+    position: absolute;
+}
+
+.clouds3{
+    right: -350px;
+    width: 100px;
+    margin-top: 150px;
+    position: absolute;
+}
+
+.clouds1-animation{
+    animation: clouds-animation 20s infinite linear;
+}
+
+.clouds2-animation{
+    animation: clouds-animation 30s infinite linear;
+}
+
+.clouds3-animation{
+    animation: clouds-animation 37s infinite linear;
+}
+
+@keyframes clouds-animation {
+    from{
+        right: -350px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+/*Configuração da grama e piso*/
+.grass{
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+    right: -160px;
+}
+
+.grass-animation{
+    animation: grass-animation 5s infinite linear;
+}
+
+@keyframes grass-animation {
+    from{
+        right: -160px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+.floor{
+    position: absolute;
+    top: 190px;
+    width: 600px;
+    height: 40px;
+    margin-left: 100px;
+}
