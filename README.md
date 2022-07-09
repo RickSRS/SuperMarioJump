@@ -37,8 +37,7 @@ Site: https://supermario-ricksrs.netlify.app
 - HTML - CSS - JS 
 
 ## Implantação em produção
-- Front end web: Netlify<br>
-[![Netlify Status](https://api.netlify.com/api/v1/badges/581ab535-ba57-4f25-bc63-12a5dfa1a3bf/deploy-status)](https://app.netlify.com/sites/supermario-ricksrs/deploys)
+- Front end web: Netlify
 
 # Clonar Projeto
 ```bash
